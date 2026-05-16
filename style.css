@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  color: hsl(187, 24%, 22%);
+  background: hsl(148, 38%, 91%);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  font: inherit;
+
+  padding: 0.75rem 1rem;
+
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 0.5rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid hsl(169, 82%, 27%);
+}
+
+fieldset {
+  border: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.query-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.query-options .radio {
+  flex: 1;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.75rem 1rem;
+
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.radio input {
+  display: none;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid hsl(186, 15%, 59%);
+  flex-shrink: 0;
+}
+
+.radio input:checked + .custom-radio {
+  background-image: url("./images/icon-radio-selected.svg");
+  background-size: cover;
+  border: none;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #666;
+}
+
+.checkbox input:checked + .custom-checkbox {
+  background-image: url("./images/icon-checkbox-check.svg");
+  background-size: cover;
+  border: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  min-height: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background: hsl(169, 82%, 27%);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.toast {
+  position: absolute;
+  top: 1rem;
+  right: 50%;
+
+  background: #1f1f1f;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 47.9375em) {
+  .row {
+    flex-direction: column;
+  }
+
+  .query-options {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 700px;
+    padding: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
